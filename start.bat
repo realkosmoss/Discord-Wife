@@ -1,7 +1,6 @@
 @echo off
 set VENV_DIR=venv
 
-echo Making venv and installing requirements.txt
 if not exist %VENV_DIR% (
     echo Creating virtual environment...
     python -m venv %VENV_DIR%
