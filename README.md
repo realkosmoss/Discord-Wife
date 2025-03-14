@@ -13,3 +13,7 @@ super ass code ✅ but it works
   
 ## Public Testing Server
 https://discord.gg/7CNRjyvdFf
+
+# Todo
+- Better (dynamic) system prompt
+- !system <system prompt> for easier access
