@@ -19,7 +19,7 @@ def Get_Response(message: Message, messages: list) -> str:
     CONTENT = message.content
     URL = f"http://{BASE_API}/api/chat"
     payload = {
-        "model": "hf.co/bartowski/Chronos-Gold-12B-1.0-GGUF:Q8_0", # hf.co/bartowski/Chronos-Gold-12B-1.0-GGUF:Q8_0 # fluffy/l3-8b-stheno-v3.2:q8_0 # :q8_0 cas/daredevil-8b-abliterated-dpomix.i1:latest OG.
+        "model": "hf.co/bartowski/Chronos-Gold-12B-1.0-GGUF:Q8_0",
         "stream": False,
         "messages": messages + [{"role": "system", "content": SYSTEM_PROMPT}] + [{"role": "user", "content": f"{USERNAME}: {CONTENT}"}],
         "keep_alive": "15m",
