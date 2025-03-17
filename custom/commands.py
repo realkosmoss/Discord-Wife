@@ -57,7 +57,6 @@ class Commands:
                 _abc = False
                 for i in lorehandler.channels:
                     if i == message.channel.id:
-                        #messages_instance = lorehandler
                         _abc = True
                         break
                 if not _abc:
@@ -110,4 +109,3 @@ class Commands:
                 await message.channel.purge()
                 await message.channel.delete()
                 lorehandler.delete()
-        # I want to add an make lore channel for specific user. Private lore better than groupchat and clears all messages leaving no trace.
