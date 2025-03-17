@@ -8,13 +8,6 @@ from custom.commands import Commands as Bot_Commands
 from custom.messages import Messages
 from custom.lore_handling import LoreHandling
 
-def Get_Messages():
-    try:
-        with open(MESSAGES_PATH, 'r') as file:
-            return json.load(file)
-    except (json.JSONDecodeError, FileNotFoundError):
-        return []
-
 MESSAGES_PATH = "messages.json"
 IN_USE = False
 
