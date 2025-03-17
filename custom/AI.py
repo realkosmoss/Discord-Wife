@@ -24,13 +24,11 @@ def Get_Response(message: Message, messages: list) -> str:
         "messages": messages + [{"role": "system", "content": SYSTEM_PROMPT}] + [{"role": "user", "content": f"{USERNAME}: {CONTENT}"}],
         "keep_alive": "15m",
         "options": {
-            "num_ctx": 16384, # MEMORY RETARD!
+            "num_ctx": 16384,
             "num_predict": 400, # max TOKENS
             "temperature": 1.3,
-            #"stop": ["<|start_header_id|>", "</|im_end|>", "<|eot_id|>", "<|im_end|>"],
             "repeat_penalty": 1.0,
             "top_p": 0.75,
-            #"top_k": 50,
             "min_p": 0.01
         }
     }
