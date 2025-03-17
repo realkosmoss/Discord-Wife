@@ -25,7 +25,7 @@ def Get_Response(message: Message, messages: list) -> str:
         "keep_alive": "15m",
         "options": {
             "num_ctx": 16384,
-            "num_predict": 400, # max TOKENS
+            "num_predict": 400,
             "temperature": 1.3,
             "repeat_penalty": 1.0,
             "top_p": 0.75,
