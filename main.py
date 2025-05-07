@@ -9,7 +9,6 @@ from custom.messages import Messages
 from custom.lore_handling import LoreHandling
 
 MESSAGES_PATH = "messages.json"
-IN_USE = False
 
 TOKEN = "pee pee poo poo!"
 
@@ -46,12 +45,6 @@ async def on_message(message: discord.Message):
     if message.content.startswith("!"):
         await bot_commands.ProcessComands(message)
         return
-    if IN_USE:
-        while IN_USE:
-            time.sleep(1)
-            if not IN_USE:
-                IN_USE = True
-                break
     async with message.channel.typing():
         start = time.time()
         response = AI.Get_Response(message, messages_instance_temp.messages)
