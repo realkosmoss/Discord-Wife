@@ -32,7 +32,6 @@ def Get_Response(message: Message, messages: list) -> str:
             "min_p": 0.01
         }
     }
-    IN_USE = True
     try:
         resp = session.post(URL, json = payload, headers = {"Content-Type": "application/json"})
     except Exception as e:
